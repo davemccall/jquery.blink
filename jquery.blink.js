@@ -12,14 +12,16 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-jQuery(document).ready(function () {
-	$("blink").each(function () {
-		var $tag = $(this);
-		window.setInterval(function () {
-			if ($tag.css("opacity") == 1)
-				$tag.css("opacity", 0);
-			else
-				$tag.css("opacity", 1);
-		}, 500);
+(function ($) {
+	$(document).ready(function () {
+		$("blink").each(function () {
+			var $tag = $(this);
+			window.setInterval(function () {
+				if ($tag.css("opacity") == 1)
+					$tag.css("opacity", 0);
+				else
+					$tag.css("opacity", 1);
+			}, 500);
+		});
 	});
 });
